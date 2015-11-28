@@ -8,10 +8,14 @@
       var url = "/search";
 
 
-
       var getData = function() {
         return $http.get(url);
       };
+
+      var getDataWithWord = function(word) {
+        var secondUrl = url + "/" + word;
+        return $http.get(url);
+      }
 
       return {
         getData: getData
