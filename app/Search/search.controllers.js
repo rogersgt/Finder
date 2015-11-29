@@ -7,8 +7,8 @@
       $scope.search = function() {
         console.log("try");
         SearchFactory.getData().success(function(data) {
-          console.log(data);
-          console.log("success");
+          $scope.data = data;
+          console.log(data[0].artists[0].name);
         });
       }
 

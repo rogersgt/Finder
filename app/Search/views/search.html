@@ -1,6 +1,6 @@
 <button type="button" name="search" ng-click="search()">search</button>
 <section>
-  <article ng-repeat="item in Items">
-    <h3>{{item.title}}</h3>
+  <article ng-repeat="band in data">
+    <h3>{{band.artists[0].name}}</h3>
   </article>
 </section>

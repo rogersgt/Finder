@@ -27,12 +27,12 @@ if ('development' == env) {
 // Routes
 app.get('/', express.static(path.join(__dirname, 'app')));
 
-app.get('/search', function(req,res,next){
-  var url = "http://api.bandsintown.com/artists/BraveBaby/events.json?app_id=findstuff?callback=JSON_CALLBACK";
+app.get('/findShows', function(req,res,next){
+  var url = "http://api.bandsintown.com/artists/Dempsey/events.json?app_id=findstuff?callback=JSON_CALLBACK";
   request.get({url: url}, function(err, response) {
     res.send(JSON.parse(response.body));
   })
-})
+});
 
 // Light It Up!
 app.listen(app.get('port'), function() {

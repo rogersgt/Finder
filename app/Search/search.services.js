@@ -5,7 +5,7 @@
     .factory('SearchFactory', function($http, moment, _) {
 
       //var url = "http://api.bandsintown.com/artists/Dempsey/events.json?api_version=2.0&app_id=findstuff?callback=JSON_CALLBACK";
-      var url = "/search";
+      var url = "/findShows";
 
 
 
