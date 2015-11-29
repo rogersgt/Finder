@@ -34,6 +34,17 @@ app.get('/findShows', function(req,res,next){
   })
 });
 
+app.get('/search/:word', function(req,res,next){
+  /* concatenate req.params.word into the URL below
+  *  to make the URL go to the place it needs to, e.g.,
+  *  var url = "http://api.bandsintown.com/artists/" + req.params.word + "/ending_url_stuff"
+  */
+  var url = "http://api.bandsintown.com/artists/BraveBaby/events.json?app_id=findstuff?callback=JSON_CALLBACK";
+  request.get({url: url}, function(err, response) {
+    res.send(JSON.parse(response.body));
+  })
+})
+
 // Light It Up!
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
