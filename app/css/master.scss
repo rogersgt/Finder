@@ -4,3 +4,102 @@
 .hide {
   display: none;
 }
+
+//////////////////// general /////////////////////////////
+body {
+  background-color: $lightGray;
+  font-family: "Averia Sans Libre";
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+  &:hover{
+    text-shadow: 1px 1px 2px black;
+    color: $redLike;
+  }
+}
+button {
+  border: none;
+  color: white;
+  margin: 1% auto;
+  background-color: $paleGreen;
+  &:focus {
+    outline: none;
+  }
+}
+input {
+  border: none;
+  margin-left: 5%;
+  &:focus {
+    outline: none;
+  }
+}
+select {
+  margin-left: 5%;
+}
+//////////////////// header //////////////////////////////
+h1 {
+  color: $lightGray;
+  text-align: center;
+  text-shadow: 1px 1px 2px $paleGreen;
+  background-color: $lightBlue;
+  margin: 0;
+  padding: 3%;
+}
+#nav {
+  background: linear-gradient(to bottom, black, $gunsmoke, $gunsmoke, black);
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin: 0 1%;
+    padding: 1%;
+    &:nth-child(1) {
+      margin-left: 25%;
+    }
+  }
+}
+//////////////////// body ////////////////////////////////
+article {
+  background-color: $lightBlue;
+  border-radius: .8em;
+  color: white;
+  margin: 5% auto;
+  width: 60%;
+  padding: 1%;
+  box-shadow: 2px 2px 6px black;
+  border: .2em solid $paleGreen;
+  h3 {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.2em;
+    text-align: center;
+
+  }
+  .details {
+    background-color: $lightGray;
+    color: black;
+    border-radius: .4em;
+    padding: 2%;
+    a {
+      color: $lightBlue;
+      &:hover {
+        color: $redLike;
+      }
+    }
+    h4, h6, p {
+      margin: 1% auto;
+    }
+  }
+  hr {
+    color: $lightGray;
+  }
+}
+.untrack {
+  background-color: $redLike;
+  &:hover {
+    background-color: $paleGreen;
+  }
+}

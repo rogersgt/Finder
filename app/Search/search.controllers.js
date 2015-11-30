@@ -8,7 +8,6 @@
         var name = artist.name;
         SearchFactory.getBand(name).success(function(data) {
           $scope.data = data;
-          console.log(data);
         });
       }
 

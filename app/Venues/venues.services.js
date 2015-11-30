@@ -40,11 +40,10 @@
         return $http.post(url, newVenue);
       };
 
-      var deleteItem = function(venue) {
-        console.log(venue);
-        // var venueID = venue.id;
-        // var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues/" + venueID;
-        // $http.delete(url);
+      var deleteItem = function(venueID) {
+        //var venueID = venue.id;
+        var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues/565bd9183d6ace0300ea4bab";
+        $http.delete(url);
       }
 
       return {

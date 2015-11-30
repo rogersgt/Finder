@@ -5,7 +5,7 @@
     .controller('VenueController', function($scope, VenueFactory, TrackFactory) {
 /////////// get inidvidual venue /////////////////
       $scope.searchVenues = function(venue) {
-        var venueID = venue.multipleSelect;
+         var venueID = venue.multipleSelect;
         VenueFactory.getVenue(venueID).success(function(data) {
           $scope.tVen = data;
         });
@@ -34,8 +34,9 @@
         });
       }
 
-      $scope.untrack = function(venue) {
-        TrackFactory.deleteItem(venue);
+      $scope.untrack = function() {
+        // console.log(id);
+        TrackFactory.deleteItem();
       }
 
 

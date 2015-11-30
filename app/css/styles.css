@@ -1,2 +1,84 @@
 .hide {
   display: none; }
+
+body {
+  background-color: #ececec;
+  font-family: "Averia Sans Libre";
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: white; }
+  a:hover {
+    text-shadow: 1px 1px 2px black;
+    color: #ac5353; }
+
+button {
+  border: none;
+  color: white;
+  margin: 1% auto;
+  background-color: #90d6c8; }
+  button:focus {
+    outline: none; }
+
+input {
+  border: none;
+  margin-left: 5%; }
+  input:focus {
+    outline: none; }
+
+select {
+  margin-left: 5%; }
+
+h1 {
+  color: #ececec;
+  text-align: center;
+  text-shadow: 1px 1px 2px #90d6c8;
+  background-color: #458cd6;
+  margin: 0;
+  padding: 3%; }
+
+#nav {
+  background: linear-gradient(to bottom, black, #606060, #606060, black);
+  margin: 0;
+  padding: 0; }
+  #nav li {
+    display: inline-block;
+    margin: 0 1%;
+    padding: 1%; }
+    #nav li:nth-child(1) {
+      margin-left: 25%; }
+
+article {
+  background-color: #458cd6;
+  border-radius: .8em;
+  color: white;
+  margin: 5% auto;
+  width: 60%;
+  padding: 1%;
+  box-shadow: 2px 2px 6px black;
+  border: 0.2em solid #90d6c8; }
+  article h3 {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.2em;
+    text-align: center; }
+  article .details {
+    background-color: #ececec;
+    color: black;
+    border-radius: .4em;
+    padding: 2%; }
+    article .details a {
+      color: #458cd6; }
+      article .details a:hover {
+        color: #ac5353; }
+    article .details h4, article .details h6, article .details p {
+      margin: 1% auto; }
+  article hr {
+    color: #ececec; }
+
+.untrack {
+  background-color: #ac5353; }
+  .untrack:hover {
+    background-color: #90d6c8; }
