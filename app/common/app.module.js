@@ -7,6 +7,7 @@
       'underscore',
       'moment',
       'Search',
+      'Venues'
     ])
     .config(function ($routeProvider) {
       $routeProvider

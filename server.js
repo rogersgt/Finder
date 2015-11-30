@@ -27,23 +27,30 @@ if ('development' == env) {
 // Routes
 app.get('/', express.static(path.join(__dirname, 'app')));
 
-app.get('/findShows', function(req,res,next){
-  var url = "http://api.bandsintown.com/artists/Dempsey/events.json?app_id=findstuff?callback=JSON_CALLBACK";
+app.get('/trackedVenues', function(req,res,next){
+  var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues";
   request.get({url: url}, function(err, response) {
     res.send(JSON.parse(response.body));
   })
 });
 
-app.get('/search/:word', function(req,res,next){
+app.get('/searchBands/:artist', function(req,res,next){
   /* concatenate req.params.word into the URL below
   *  to make the URL go to the place it needs to, e.g.,
   *  var url = "http://api.bandsintown.com/artists/" + req.params.word + "/ending_url_stuff"
   */
-  var url = "http://api.bandsintown.com/artists/BraveBaby/events.json?app_id=findstuff?callback=JSON_CALLBACK";
+  var url = "http://api.bandsintown.com/artists/" + req.params.artist + "/events.json?&app_id=findstuff?callback=JSON_CALLBACK";
   request.get({url: url}, function(err, response) {
     res.send(JSON.parse(response.body));
   })
-})
+});
+
+app.get('/searchVenues/:venueID', function(req,res,next){
+  var url = "http://api.bandsintown.com/venues/" + req.params.venueID + "/events.json?&app_id=findstuff?callback=JSON_CALLBACK";
+  request.get({url: url}, function(err, response) {
+    res.send(JSON.parse(response.body));
+  })
+});
 
 // Light It Up!
 app.listen(app.get('port'), function() {

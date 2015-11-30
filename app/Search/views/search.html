@@ -1,6 +1,19 @@
-<button type="button" name="search" ng-click="search()">search</button>
+<form class="artistSearch">
+  <input ng-model="artist.name" type="text" name="artist" value="" placeholder="enter artist name">
+  <button type="submit" name="search" ng-click="searchBand(artist)">search</button>
+</form>
+
 <section>
   <article ng-repeat="band in data">
-    <h3>{{band.artists[0].name}}</h3>
+    <h3>{{band.title}}</h3>
+    <button type="button" name="add" ng-click="addVenue(band)">Track Venue</button>
+    <span style="display: none;">{{band.id}}</span>
+    <h4>{{band.datetime | date:dateFormat}}</h4>
+    <ul>
+      <div>
+        Lineup:
+      </div>
+      <li ng-repeat="artist in band.artists">{{artist.name}}</li>
+    </ul>
   </article>
 </section>
