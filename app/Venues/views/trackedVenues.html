@@ -1,23 +1,9 @@
 <!-- <button type="button" name="button" ng-click="untrack()">delete</button> -->
-<section>
-  <select ng-model="venue.multipleSelect">
-    <option ng-repeat="venue in trackedVenues" value="{{venue.id}}">{{venue.name}}</option>
-  </select>
-</section>
-<button type="button" ng-click="searchVenues(venue)">View Upcoming Shows</button>
+<form>
+    <select ng-model="venue.multipleSelect">
+      <option ng-repeat="venue in VCtrl.trVenues" value="{{venue.id}}">{{venue.name}}</option>
+    </select>
+  <button type="button" ng-click="VCtrl.searchVenues(venue)">View Upcoming Shows</button>
+</form>
 
-<article ng-repeat="show in tVen">
-  <h3>{{show.venue.name}}</h3>
-  <button type="button" class="untrack" >untrack venue</button>
-  <section class="details">
-    <h4>{{show.datetime | date:dateFormat}}</h4>
-    <h6>{{show.venue.city}}, {{show.venue.region}}</h6>
-    <p>Ticket Status: <a target="_blank" href='{{show.ticket_url}}'>{{show.ticket_status}}</a></p>
-  </section>
-  <div> Lineup: </div>
-  <hr>
-  <ul>
-    <li ng-repeat="artist in show.artists">{{artist.name}}</li>
-  </ul>
-</article>
-</section>
+  <tracked-venue ng-repeat="show in VCtrl.tVen" show="show"></tracked-venue>

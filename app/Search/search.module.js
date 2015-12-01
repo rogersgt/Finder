@@ -8,7 +8,7 @@
       $routeProvider
       .when('/search', {
         templateUrl: 'Search/views/search.html',
-        controller: 'SearchController'
+        controller: 'SearchController as SCtrl'
       })
 
     });

@@ -18,6 +18,7 @@ var app = express();
   app.use(methodOverride());
   app.use(express.static(path.join(__dirname, 'app')));
 
+
 // Dev-Specific Configuration
 var env = process.env.NODE_ENV || 'development';
 if ('development' == env) {
@@ -25,7 +26,9 @@ if ('development' == env) {
 }
 
 // Routes
-app.get('/', express.static(path.join(__dirname, 'app')));
+app.get('/', function (req, res) {
+  res.send(__dirname + '/app/index.html');
+});
 
 app.get('/trackedVenues', function(req,res,next){
   var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues";

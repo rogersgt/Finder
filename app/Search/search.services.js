@@ -4,19 +4,25 @@
     .module('Search')
     .factory('SearchFactory', function($http, moment, _) {
 
+      var getTracked = function() {
+        var url = "http://sky-net.herokuapp.com/collections/trackVenues";
+        return $http.get(url);
+      }
+
       var getBand = function(artist) {
         var url = "/searchBands/" + artist;
         return $http.get(url);
       };
 
       var trackVenue = function(newVenue) {
-        var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues";
+        var url = "http://sky-net.herokuapp.com/collections/trackVenues";
         return $http.post(url, newVenue);
       };
 
       return {
         getBand: getBand,
-        trackVenue: trackVenue
+        trackVenue: trackVenue,
+        getTracked: getTracked
       };
 
     })

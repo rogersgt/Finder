@@ -7,8 +7,11 @@
 
 //////////////////// general /////////////////////////////
 body {
-  background-color: $lightGray;
-  font-family: "Averia Sans Libre";
+  //background-color: $lightGray;
+  background-image: url('../assets/crowd-hands.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Oswald";
   padding: 0;
   margin: 0;
 }
@@ -25,13 +28,23 @@ button {
   color: white;
   margin: 1% auto;
   background-color: $paleGreen;
+  vertical-align: middle;
+  font-size: 1.4em;
+  padding: .2em;
   &:focus {
     outline: none;
+  }
+  &:hover {
+    text-shadow: .5px .5px 1px $gunsmoke;
   }
 }
 input {
   border: none;
-  margin-left: 5%;
+  margin-left: 20%;
+  font-size: 1.9em;
+  vertical-align: middle;
+  border-radius: .1em;
+  padding: .1em;
   &:focus {
     outline: none;
   }
@@ -46,19 +59,26 @@ h1 {
   text-shadow: 1px 1px 2px $paleGreen;
   background-color: $lightBlue;
   margin: 0;
-  padding: 3%;
+  padding: 1%;
+  font-size: 5em;
 }
 #nav {
   background: linear-gradient(to bottom, black, $gunsmoke, $gunsmoke, black);
   margin: 0;
   padding: 0;
   li {
+    font-size: 1.7em;
     display: inline-block;
     margin: 0 1%;
     padding: 1%;
     &:nth-child(1) {
-      margin-left: 25%;
+      margin-left: 35%;
     }
+    // a {
+    //   &:active {
+    //     color: $paleGreen;
+    //   }
+    // }
   }
 }
 //////////////////// body ////////////////////////////////
@@ -71,12 +91,14 @@ article {
   padding: 1%;
   box-shadow: 2px 2px 6px black;
   border: .2em solid $paleGreen;
+  li {
+    font-size: 1.8em;
+  }
   h3 {
     color: white;
     text-shadow: 1px 1px 2px black;
-    font-size: 1.2em;
+    font-size: 1.9em;
     text-align: center;
-
   }
   .details {
     background-color: $lightGray;
@@ -89,8 +111,16 @@ article {
         color: $redLike;
       }
     }
+    h4 {
+      font-size: 1.5em;
+    }
+    h6 {
+      font-size: 1.1em;
+    }
     h4, h6, p {
       margin: 1% auto;
+      width: 30%;
+      text-align: center;
     }
   }
   hr {
@@ -102,4 +132,19 @@ article {
   &:hover {
     background-color: $paleGreen;
   }
+}
+form {
+  margin: 1% auto;
+  width: 55%;
+}
+select {
+    border: 0;
+    font-size: 1.9em;
+    margin: 0 auto;
+    vertical-align: middle;
+    background-color: $gunsmoke;
+    color: white;
+    &:focus{
+      outline: none;
+    }
 }

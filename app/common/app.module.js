@@ -11,10 +11,7 @@
     ])
     .config(function ($routeProvider) {
       $routeProvider
-        .when('/', {
-          templateUrl: 'common/views/home.html',
-          controller: 'MainController'
-        })
+        .when('/', { redirectTo: '/trackedVenues'})
         .when('/404', {
           template: 'common/views/404.html'
         })

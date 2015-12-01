@@ -11,12 +11,12 @@
 
       // get one tracked venue ///
       var getOneVen = function(venueID) {
-        var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues/" + venueID;
+        var url = "http://sky-net.herokuapp.com/collections/trackVenues/" + venueID;
         return $http.get(url);
       }
 
       var cityVen = function() {
-        var url = "http://tiny-tiny.herokuapp.com/collections/charlestonVenues";
+        var url = "http://sky-net.herokuapp.com/collections/cityVenues";
         return $http.get(url);
       }
 
@@ -30,7 +30,7 @@
     })
     .factory('TrackFactory', function($http, moment, _) {
 
-      var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues";
+      var url = "http://sky-net.herokuapp.com/collections/trackVenues";
 
       var getTrackedVenues = function() {
         return $http.get(url);
@@ -42,7 +42,7 @@
 
       var deleteItem = function(venueID) {
         //var venueID = venue.id;
-        var url = "http://tiny-tiny.herokuapp.com/collections/trackVenues/565bd9183d6ace0300ea4bab";
+        var url = "http://sky-net.herokuapp.com/collections/trackVenues/" + venueID;
         $http.delete(url);
       }
 

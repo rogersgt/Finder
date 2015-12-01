@@ -3,18 +3,19 @@
   angular
     .module('Venues')
     .controller('VenueController', function($scope, VenueFactory, TrackFactory) {
+      var vm = this;
 /////////// get inidvidual venue /////////////////
-      $scope.searchVenues = function(venue) {
+      vm.searchVenues = function(venue) {
          var venueID = venue.multipleSelect;
         VenueFactory.getVenue(venueID).success(function(data) {
-          $scope.tVen = data;
+          vm.tVen = data;
         });
       }
 
 ////////// get city venues ////////////////
       var getCityVen = function() {
         VenueFactory.cityVen().success(function(data) {
-          $scope.venues = data;
+          vm.venues = data;
         });
       };
 
@@ -23,20 +24,37 @@
 ///////// get tracked venues ////////////////
       var getVen = function() {
         TrackFactory.getTrackedVenues().success(function(data) {
-          $scope.trackedVenues = data;
+          vm.trVenues = data;
         });
       }
 
       getVen();
 
-      $scope.trackVenue = function(newVenue) {
-        TrackFactory.venue(newVenue).success(function(data) {
+      vm.trackVenue = function(show) {
+        TrackFactory.getTrackedVenues().success(function(data) {
+          var names = [];
+          function check() {
+            for (var i = 0; i < data.length; i++) {
+              names.push(data[i].id);
+            }
+          }
+          check();
+          if (!_.contains(names, show.venue.id)) {
+            TrackFactory.venue(show.venue);
+          }
         });
       }
 
-      $scope.untrack = function() {
-        // console.log(id);
-        TrackFactory.deleteItem();
+      vm.untrack = function(venue) {
+        TrackFactory.getTrackedVenues().success(function(data) {
+          for (var i = 0; i < data.length; i++) {
+            if (data[i].id === venue.id) {
+              var targetId = data[i]._id;
+            }
+          }
+          TrackFactory.deleteItem(targetId);
+        
+        });
       }
 
 

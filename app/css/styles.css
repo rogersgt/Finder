@@ -2,8 +2,10 @@
   display: none; }
 
 body {
-  background-color: #ececec;
-  font-family: "Averia Sans Libre";
+  background-image: url("../assets/crowd-hands.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Oswald";
   padding: 0;
   margin: 0; }
 
@@ -18,13 +20,22 @@ button {
   border: none;
   color: white;
   margin: 1% auto;
-  background-color: #90d6c8; }
+  background-color: #90d6c8;
+  vertical-align: middle;
+  font-size: 1.4em;
+  padding: .2em; }
   button:focus {
     outline: none; }
+  button:hover {
+    text-shadow: 0.5px 0.5px 1px #606060; }
 
 input {
   border: none;
-  margin-left: 5%; }
+  margin-left: 20%;
+  font-size: 1.9em;
+  vertical-align: middle;
+  border-radius: .1em;
+  padding: .1em; }
   input:focus {
     outline: none; }
 
@@ -37,18 +48,20 @@ h1 {
   text-shadow: 1px 1px 2px #90d6c8;
   background-color: #458cd6;
   margin: 0;
-  padding: 3%; }
+  padding: 1%;
+  font-size: 5em; }
 
 #nav {
   background: linear-gradient(to bottom, black, #606060, #606060, black);
   margin: 0;
   padding: 0; }
   #nav li {
+    font-size: 1.7em;
     display: inline-block;
     margin: 0 1%;
     padding: 1%; }
     #nav li:nth-child(1) {
-      margin-left: 25%; }
+      margin-left: 35%; }
 
 article {
   background-color: #458cd6;
@@ -59,10 +72,12 @@ article {
   padding: 1%;
   box-shadow: 2px 2px 6px black;
   border: 0.2em solid #90d6c8; }
+  article li {
+    font-size: 1.8em; }
   article h3 {
     color: white;
     text-shadow: 1px 1px 2px black;
-    font-size: 1.2em;
+    font-size: 1.9em;
     text-align: center; }
   article .details {
     background-color: #ececec;
@@ -73,8 +88,14 @@ article {
       color: #458cd6; }
       article .details a:hover {
         color: #ac5353; }
+    article .details h4 {
+      font-size: 1.5em; }
+    article .details h6 {
+      font-size: 1.1em; }
     article .details h4, article .details h6, article .details p {
-      margin: 1% auto; }
+      margin: 1% auto;
+      width: 30%;
+      text-align: center; }
   article hr {
     color: #ececec; }
 
@@ -82,3 +103,17 @@ article {
   background-color: #ac5353; }
   .untrack:hover {
     background-color: #90d6c8; }
+
+form {
+  margin: 1% auto;
+  width: 55%; }
+
+select {
+  border: 0;
+  font-size: 1.9em;
+  margin: 0 auto;
+  vertical-align: middle;
+  background-color: #606060;
+  color: white; }
+  select:focus {
+    outline: none; }

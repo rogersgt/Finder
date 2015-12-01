@@ -8,11 +8,11 @@
       $routeProvider
       .when('/Charleston', {
         templateUrl: 'Venues/views/venues.html',
-        controller: 'VenueController'
+        controller: 'VenueController as VCtrl'
       })
       .when('/trackedVenues', {
         templateUrl: 'Venues/views/trackedVenues.html',
-        controller: 'VenueController'
+        controller: 'VenueController as VCtrl'
       })
 
     });

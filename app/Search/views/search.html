@@ -1,22 +1,3 @@
-<form class="artistSearch">
-  <input ng-model="artist.name" type="text" name="artist" value="" placeholder="enter artist name">
-  <button type="submit" name="search" ng-click="searchBand(artist)">search</button>
-</form>
+<search-band></search-band>
 
-<section>
-  <article ng-repeat="band in data">
-    <h3>{{band.venue.name}}</h3>
-    <span class="hide">{{band.venue.id}}</span>
-    <button type="button" name="add" ng-click="addVenue(band)">track venue</button>
-    <section class="details">
-      <h4>{{band.datetime | date:dateFormat}}</h4>
-      <h6>{{band.venue.city}}, {{band.venue.region}}</h6>
-      <p>Ticket Status: <a target="_blank" href='{{band.ticket_url}}'>{{band.ticket_status}}</a></p>
-    </section>
-    <div> Lineup: </div>
-    <hr>
-    <ul>
-      <li ng-repeat="artist in band.artists">{{artist.name}}</li>
-    </ul>
-  </article>
-</section>
+<search-show ng-repeat="show in SCtrl.shows" show="show"></search-show>
