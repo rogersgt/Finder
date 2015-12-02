@@ -1,0 +1,15 @@
+<article>
+  <h3>{{show.venue.name}}</h3>
+  <button type="button" name="add" ng-click="trackVenue(show.venue)">Track Venue</button>
+  <section class="details">
+    <h4>{{show.datetime | date:dateFormat}}</h4>
+    <h6>{{show.venue.city}}, {{show.venue.region}}</h6>
+    <p>Ticket Status: <a target="_blank" href='{{show.ticket_url}}'>{{show.ticket_status}}</a></p>
+  </section>
+  <div> Lineup: </div>
+  <hr>
+  <ul>
+    <li ng-repeat="artist in show.artists">{{artist.name}}</li>
+  </ul>
+</article>
+</section>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Find Stuff</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/media.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-app="FindStuff">
+    <h1>VenuesInTown</h1>
+    <ul id='nav'>
+      <!-- <li><a href='#/'>Home</a></li> -->
+      <li><a href="#search">Search for bands</a></li>
+      <!-- <li><a href="#Charleston">Charleston Shows</a></li> -->
+      <li><a href="#trackedVenues">Tracked Venues</a></li>
+    </ul>
+
+    <ng-view></ng-view>
+    <!-- Annyanng -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
+    <!-- bower_components -->
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/moment/moment.js" charset="utf-8"></script>
+    <!-- <script src="bower_components/node-sass/bin/node-sass.js" charset="utf-8"></script> -->
+    <script src="bower_components/underscore/underscore.js" charset="utf-8"></script>
+
+    <!-- common module -->
+    <script src="common/app.module.js" charset="utf-8"></script>
+    <script src="common/directives.js" charset="utf-8"></script>
+    <script src="common/app.services.js" charset="utf-8"></script>
+    <script src="common/app.controllers.js" charset="utf-8"></script>
+
+    <!-- search module -->
+    <script src="Search/search.module.js" charset="utf-8"></script>
+    <script src="Search/search.directives.js" charset="utf-8"></script>
+    <script src="Search/search.services.js" charset="utf-8"></script>
+    <script src="Search/search.controllers.js" charset="utf-8"></script>
+
+    <!-- venues module -->
+    <script src="Venues/venues.module.js" charset="utf-8"></script>
+    <script src="Venues/venues.directives.js" charset="utf-8"></script>
+    <script src="Venues/venues.services.js" charset="utf-8"></script>
+    <script src="Venues/venues.controllers.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

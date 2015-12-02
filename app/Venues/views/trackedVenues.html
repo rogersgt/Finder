@@ -1,0 +1,9 @@
+<!-- <button type="button" name="button" ng-click="untrack()">delete</button> -->
+<form>
+    <select ng-model="venue.multipleSelect">
+      <option ng-repeat="venue in VCtrl.trVenues" value="{{venue.id}}">{{venue.name}}</option>
+    </select>
+  <button type="button" ng-click="VCtrl.searchVenues(venue)">View Upcoming Shows</button>
+</form>
+
+  <tracked-venue ng-repeat="show in VCtrl.tVen" show="show"></tracked-venue>

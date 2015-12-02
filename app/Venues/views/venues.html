@@ -1,0 +1,8 @@
+<form>
+  <select ng-model="venue.multipleSelect">
+    <option ng-repeat="venue in VCtrl.venues" value="{{venue.id}}">{{venue.name}}</option>
+  </select>
+  <button type="button" ng-click="VCtrl.searchVenues(venue)">View Upcoming Shows</button>
+</form>
+
+  <venue-show ng-repeat="show in VCtrl.tVen" show="show"></venue-show>
