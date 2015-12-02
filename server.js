@@ -27,7 +27,7 @@ if ('development' == env) {
 
 // Routes
 app.get('/', function (req, res) {
-  res.send(__dirname + '/index.html');
+  res.send(__dirname + 'index.html');
 });
 
 app.get('/trackedVenues', function(req,res,next){
