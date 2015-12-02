@@ -1,0 +1,23 @@
+{
+  "name": "finder",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/rogersgt/Finder",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-google-maps": "~2.2.1",
+    "moment": "~2.10.6",
+    "node-sass": "~3.4.2",
+    "underscore": "~1.8.3",
+    "angular-route": "~1.4.8"
+  }
+}
