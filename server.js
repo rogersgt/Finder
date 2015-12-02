@@ -59,9 +59,3 @@ app.get('/searchVenues/:venueID', function(req,res,next){
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
-<<<<<<< HEAD
-
-
-//comment to update
-=======
->>>>>>> e1068cf0f8b184b17564dd85a572ee5aa61b8706
